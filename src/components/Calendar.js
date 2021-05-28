@@ -33,7 +33,12 @@ function CalendarComponent({ date, setDate, items, getChecks, changeCheck }) {
   const checks = getChecks('day');
 
   const percentCompleted = () => {
-    return ((checks.length / items.length) * 100).toFixed(2)
+
+    if (items.length === 0){
+      return 0
+    }
+
+    return ((checks.length / items.length) * 100).toFixed(2);
   }
 
   const getCheck = itemID => {
