@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Daily checklist
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+3. [Usage](#usage)
+4. [Screenshots](#screenshots)
+5. [Dependencies](#dependencies)
+6. [Technical Notes](#technical-notes)
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+Daily checklist helps you track activities that you have to do daily. For each month, you can add activities (items). The app then generates a checklist for each item for each day.
 
-### `yarn start`
+Using the application, you can:
+1. Add to-do items for a month.
+2. Check/uncheck items for each day.
+3. Switch into daily view or monthly view.
+4. Copy to-do items from a previous month to the current month.
+5. See the to-do items completed in percent.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repo
 
-### `yarn test`
+2. In the project directory, install all the dependencies using:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  `yarn`
 
-### `yarn build`
+3. Run the project using:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  `yarn start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app runs on http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `yarn eject`
+The website opens with the current day in the daily view. Here, you can:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Switch dates.
+2. Check or uncheck to-do items.
+3. Jump to **Today**.
+4. Switch to **Month** view.
+5. Go to the **Items** page to add to-do items.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the **Month** page, you can:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. View the checks for all the days in the selected month.
+2. Check or uncheck to-do items.
+3. Switch months.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+In the **Items** page, you can:
 
-## Learn More
+1. View all the to-do items in the selected month.
+2. Add or edit to-do items.
+3. Copy all or some to-do items to the current month.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Home page (Daily view)
+![Home Page](screenshots/daily_view.png)
 
-### Code Splitting
+2. Month view
+![Calendar](screenshots/month_view.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Items
+![Import and Export ideas](screenshots/items_page.png)
 
-### Analyzing the Bundle Size
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. @material-ui/core ^4.11.4
+2. @material-ui/icons ^4.11.2
+3. react-calendar ^3.4.0
 
-### Making a Progressive Web App
+## Technical Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. The app uses browser's local storage to store the ideas. So make sure to export your ideas before clearing browser data.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. You can edit the functions inside `src/helpers/storage.js` to implement data storage using API, database, or files.
