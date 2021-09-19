@@ -57,13 +57,13 @@ In the **Items** page, you can:
 ## Screenshots
 
 1. Home page (Daily view)
-![Home Page](screenshots/daily_view.png)
+![Home Page](screenshots/daily_view.PNG)
 
 2. Month view
-![Calendar](screenshots/month_view.png)
+![Calendar](screenshots/month_view.PNG)
 
 3. Items
-![Import and Export ideas](screenshots/items_page.png)
+![Import and Export ideas](screenshots/items_page.PNG)
 
 ## Dependencies
 
